@@ -8,17 +8,25 @@ client = discord.Client() # 接続に使用するオブジェクト
 async def on_ready():
     print('ログインしました')
 
-# 「/neko」と発言したら「にゃーん」が返る処理
 @client.event
 async def on_message(message):
     if message.content.startswith('/random'):
         cmd = message.content.split(" ")
-        if len(cmd) == 3:
-            reply = random.randint(int(cmd[1]), int(cmd[2]))
-        elif len(cmd) == 2:
+        cmd_cnt = len(cmd)
+        
+        if cmd_cnt >= 3:
+            if cmd[1].isdigit():
+                reply = random.randint(int(cmd[1]), int(cmd[2]))
+            else:
+                reply = cmd[random.randint(1, cmd_cnt - 1]
+        elif cmd_cnt == 2:
             reply = random.randint(1, int(cmd[1]))
         else:
-            reply = "構文は　/random 最小数 最大数　もしくは　/random 最大数　です"
+            if random.randint(1, 2) == 1:
+                reply = "表"
+            else:
+                reply = "裏"
+                                      
         print(reply)
         await client.send_message(message.channel, reply)
 
