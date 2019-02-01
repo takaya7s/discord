@@ -18,7 +18,7 @@ async def on_message(message):
             if cmd[1].isdigit():
                 reply = random.randint(int(cmd[1]), int(cmd[2]))
             else:
-                reply = cmd[random.randint(1, cmd_cnt - 1]
+                reply = cmd[random.randint(1, cmd_cnt - 1)]
         elif cmd_cnt == 2:
             reply = random.randint(1, int(cmd[1]))
         else:
