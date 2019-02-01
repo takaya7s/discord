@@ -1,1 +1,1 @@
-bot: python RandomBot.py
+bot: python CommandBot.py

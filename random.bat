@@ -1,0 +1,2 @@
+py CommandBot.py
+pause
