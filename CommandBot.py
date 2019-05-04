@@ -60,15 +60,15 @@ def mhxx(cmd):
         return list[random.randint(0, count - 1)]
     if cmd_cnt == 1:
         if cmd[0] == "o":
-            retutn list[random.randint(0, 74)]
+            return list[random.randint(0, 74)]
         elif cmd[0] == "os":
-            retutn list[random.randint(0, 92)]
+            return list[random.randint(0, 92)]
         if cmd[0] == "s":
             count = 86
             rnd = random.randint(0, 86)
             if rnd > 68:
                 rnd += 6
-            retutn list[rnd]
+            return list[rnd]
     
     return "エラー"
 
