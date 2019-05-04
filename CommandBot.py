@@ -1,4 +1,4 @@
-﻿import discord # インストールした discord.py
+import discord # インストールした discord.py
 import random
 
 client = discord.Client() # 接続に使用するオブジェクト
@@ -17,6 +17,8 @@ async def on_message(message):
         reply = command_random(cmd)
     elif cmd[0] == "//spr":
         reply = command_spr()
+    elif cmd[0] == "//mhxx":
+        reply = command_mhxx(cmd)
     
     if reply != "":
         print(reply)
